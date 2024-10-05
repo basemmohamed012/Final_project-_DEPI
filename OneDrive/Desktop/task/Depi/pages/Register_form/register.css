@@ -1,0 +1,130 @@
+.form-container {
+    max-width: 600px;
+    margin: auto;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    direction: rtl
+}
+.text-right {
+    text-align: right;
+}
+
+
+  
+  .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(255,255,255,1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E'); /* تغيير لون الأيقونة إلى الأبيض */
+  }
+
+form {
+    text-align: right;
+}
+
+input[type="tel"]::placeholder {
+    text-align: right;
+}
+
+.input-group {
+    flex-direction: row-reverse;
+}
+
+.flag {
+    width: 20px;
+    height: 15px;
+}
+
+.input-group .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    /* تقليل الانحناء */
+  
+    border-left: white;
+    border-left: none;
+    transition: all 0.3s ease;
+}
+
+.input-group .btn {
+    border: 1px solid #ced4da;
+    background-color: white;
+    border-right: white;
+    border-right: none;
+    border-radius: 5px;
+    /* تقليل الانحناء */
+    transition: all 0.3s ease;
+
+}
+
+.input-group:focus-within .form-control,
+.input-group:focus-within .btn {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    transform: scale(1.02);
+}
+
+.input-group .btn,
+.input-group .form-control {
+    /* border: 1px solid #ced4da; */
+}
+
+.toggle-btn {
+    display: inline-block;
+    width: 40px;
+    /* حجم أصغر */
+    height: 24px;
+    /* حجم أصغر */
+    background-color: #ccc;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+    /* مسافة بين الزر والنص */
+}
+
+.toggle-btn.active {
+    background-color: #007bff;
+}
+
+.toggle-btn::before {
+    content: '';
+    width: 20px;
+    /* حجم أصغر */
+    height: 20px;
+    /* حجم أصغر */
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    /* تعديل الموضع */
+    left: 2px;
+    /* تعديل الموضع */
+    transition: transform 0.3s ease;
+}
+
+.toggle-btn.active::before {
+    transform: translateX(16px);
+    /* تعديل المسافة */
+}
+.btn:hover{
+border: 1px solid red;
+color: red;
+background-color: white;
+}
+.text-center p {
+    margin-bottom: 20px; /* إضافة مسافة متساوية بين العناصر */
+}
+
+.text-center a {
+     /* إضافة خط أحمر تحت النص */
+    padding-bottom: 2px; /* إضافة مساحة تحت النص لتجنب تداخل الخط */
+}
+
+
+.text-center a:hover {
+    color: darkred; /* تغيير اللون عند التمرير على الرابط إن أردت */
+}
+.link1{
+    text-decoration: none; /* إزالة الخط السفلي */
+    border-bottom: 2px solid red; /* إضافة خط أحمر تحت النص */
+    padding-bottom: 2px; /* إضافة مساحة تحت النص لتجنب تداخل الخط */
+}
+

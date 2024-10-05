@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج تسجيل</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Depi/css/style.css">
+    
+    <link rel="stylesheet" href="register.css">
+ 
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand text-white me-auto" href="#" target="_blank"><span class="first-letter">A</span>l_hayat<span class="com">.com</span></a>
+
+      
+          <!-- أيقونة الفتح (ستظهر فقط في الشاشات الصغيرة) -->
+          <i id="open-nav" class="bi bi-list text-white d-lg-none" style="font-size: 24px; cursor: pointer;"></i>
+      
+          <!-- أيقونة الغلق (ستظهر فقط في الشاشات الصغيرة) -->
+          <i id="close-nav" class="bi bi-x text-white d-none d-lg-none" style="font-size: 24px; cursor: pointer;"></i>
+      
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="btn btn-outline-light" href="../Depi/pages/Register_form/register.html" >انضم الان</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="../Depi/pages/Loin_form/login.html" target="_blank">دخول</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#" target="_blank">الحياة للاطباء</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/Depi/pages/makalat/makalat.html" target="_blank" >مقالات</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#" target="_blank">تواصل معنا</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/Depi/pages/test1.html" target="_blank">Egypt <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg" class="flag-icon" alt="Egypt Flag"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+    <div class="container mt-5">
+        <div class="card form-container">
+            <div class="card-header text-center bg-primary text-white mb-4">
+                انضم الآن
+            </div>
+            <div class="card-body">
+                <form id="registrationForm" action="" method="post">
+                    <!-- الاسم -->
+                    <div class="mb-3 row">
+                        <label for="fullName" class="col-sm-4 col-form-label form-label">الاسم <span
+                                class="text-danger">*</span></label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="fullName" placeholder="الاسم بالكامل">
+                            <small id="nameError" class="text-danger"></small>
+                        </div>
+                    </div>
+
+                    <!-- رقم الموبايل -->
+                    <div class="mb-3 row">
+                        <label for="mobileNumber" class="col-sm-4 col-form-label form-label">رقم الموبايل <span
+                                class="text-danger">*</span></label>
+                        <div class="col-sm-8">
+                            <div class="input-group">
+                                <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                    id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/197/197589.png" alt="علم مصر"
+                                        id="selectedFlag" class="flag">
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#"
+                                            data-flag="https://cdn-icons-png.flaticon.com/512/197/197589.png"
+                                            data-code="002" data-country="Egypt"><img
+                                                src="https://cdn-icons-png.flaticon.com/512/197/197589.png"
+                                                alt="علم مصر" class="flag"> مصر <span
+                                                class="country-code">002</span></a></li>
+                                    <li><a class="dropdown-item" href="#"
+                                            data-flag="https://cdn-icons-png.flaticon.com/512/197/197374.png"
+                                            data-code="001" data-country="USA"><img
+                                                src="https://cdn-icons-png.flaticon.com/512/197/197374.png"
+                                                alt="علم أمريكا" class="flag"> أمريكا <span
+                                                class="country-code">001</span></a></li>
+                                                <li><a class="dropdown-item" href="#"
+                                                    data-flag="https://cdn-icons-png.flaticon.com/512/197/197486.png"
+                                                    data-code="044" data-country="UK"><img
+                                                        src="https://cdn-icons-png.flaticon.com/512/197/197486.png"
+                                                        alt="علم بريطانيا" class="flag"> بريطانيا <span
+                                                        class="country-code">044</span></a></li>
+                                            <li><a class="dropdown-item" href="#"
+                                                    data-flag="https://cdn-icons-png.flaticon.com/512/197/197560.png"
+                                                    data-code="091" data-country="India"><img
+                                                        src="https://cdn-icons-png.flaticon.com/512/197/197560.png"
+                                                        alt="علم الهند" class="flag"> الهند <span
+                                                        class="country-code">091</span></a></li>
+                                                        <li><a class="dropdown-item" href="#"
+                                                            data-flag="https://cdn-icons-png.flaticon.com/512/197/197408.png"
+                                                            data-code="049" data-country="Germany"><img
+                                                                src="https://cdn-icons-png.flaticon.com/512/197/197408.png"
+                                                                alt="علم ألمانيا" class="flag"> ألمانيا <span
+                                                                class="country-code">049</span></a></li>
+                                    <!-- بقية الدول -->
+                                </ul>
+                                <input type="tel" class="form-control" id="mobileNumber" placeholder="رقم الموبايل">
+                            </div>
+                            <small id="mobileError" class="text-danger"></small>
+                        </div>
+                    </div>
+
+                    <!-- البريد الإلكتروني -->
+                    <div class="mb-3 row">
+                        <label for="email" class="col-sm-4 col-form-label form-label">البريد الإلكتروني <span
+                                class="text-danger">*</span></label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control" id="email" placeholder="example@domain.com">
+                            <small id="emailError" class="text-danger"></small>
+                        </div>
+                    </div>
+
+                    <!-- النوع -->
+                    <div class="mb-3 row">
+                        <label for="gender" class="col-sm-4 col-form-label form-label">النوع <span
+                                class="text-danger">*</span></label>
+                        <div class="col-sm-8 d-flex align-items-center">
+                            <input class="form-check-input mx-2" type="radio" name="gender" id="male" value="male">
+                            <label class="form-check-label mx-2" for="male">ذكر</label>
+                            <input class="form-check-input mx-2" type="radio" name="gender" id="female" value="female">
+                            <label class="form-check-label mx-2" for="female">أنثى</label>
+                        </div>
+                        <small id="genderError" class="text-danger"></small>
+                    </div>
+
+                    <!-- تاريخ الميلاد -->
+                    <div class="mb-3 row">
+                        <label for="dob" class="col-sm-4 col-form-label form-label">تاريخ الميلاد</label>
+                        <div class="col-sm-8">
+                            <input type="date" class="form-control" id="dob">
+                        </div>
+                    </div>
+
+                    <!-- كلمة المرور -->
+                    <div class="mb-3 row">
+                        <label for="password" class="col-sm-4 col-form-label form-label">كلمة المرور <span
+                                class="text-danger">*</span></label>
+                        <div class="col-sm-8">
+                            <input type="password" class="form-control" id="password" placeholder="********" minlength="6">
+                            <small id="passwordError" class="text-danger"></small>
+                        </div>
+                    </div>
+
+                    <!-- إضافة التأمين الطبي -->
+                    <div class="mb-3 row">
+                        <label class="col-sm-4 col-form-label form-label">إضافة التأمين الطبي</label>
+                        <div class="col-sm-8 d-flex align-items-center">
+                            <div class="toggle-btn" id="toggleInsurance"></div>
+                            <span class="ms-2">إضافة التأمين الطبي</span>
+                        </div>
+                        <div id="insuranceError" class="error"></div>
+                    </div>
+
+                    <!-- الشروط والقوانين -->
+                    <div class="text-center">
+                        <p>بقيامك بالتسجيل فأنت توافق على <a href="#">الشروط والقوانين</a></p>
+                    </div>
+
+                    <!-- زر التسجيل -->
+                    <div class="mb-3 text-center">
+                        <button type="submit" class="btn btn-danger">اشترك الآن</button>
+                    </div>
+
+                    <!-- رابط تسجيل الدخول -->
+                    <div class="text-center">
+                        <p>مسجل بالفعل في فيزيتا؟ <a class="link1" href="/Loin_form/login.html">دخول</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" class="footer light-background">
+        <div class="container footer-top">
+            <div class="row g-4">
+                <!-- Footer About Section -->
+                <div class="col-lg-4 col-md-6 footer-about text-center">
+                    <a class="navbar-brand text-white" href="#" style="font-size: 2.2rem; margin-bottom: 20px;">
+                        <span class="first-letter">A</span>l_hayat<span class="com">.com</span>
+                    </a>
+                
+                    <ul class="list-unstyled">
+                        <li style="font-size: 1.2rem;">شارع الأمل A108</li>
+                        <li style="font-size: 1.2rem;">535022 كفر الشيخ، مصر</li>
+                        <li style="font-size: 1.2rem;"><strong>الهاتف:</strong> +20 123 456 7890</li>
+                        <li style="font-size: 1.2rem;"><strong>البريد الإلكتروني:</strong> info@alhayah.com</li>
+                    </ul>
+                </div>
+    
+                <!-- Useful Links -->
+                <div class="col-lg-4 col-md-6 footer-links text-center">
+                    <h4 class="fs-5" style="font-size: 2rem;">روابط مفيدة</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" style="font-size: 1.2rem;">الرئيسية</a></li>
+                        <li><a href="#" style="font-size: 1.2rem;">عننا</a></li>
+                        <li><a href="#" style="font-size: 1.2rem;">خدماتنا</a></li>
+                        <li><a href="#" style="font-size: 1.2rem;">الأسئلة المتكررة</a></li>
+                        <li><a href="#" style="font-size: 1.2rem;">تعليقات المرضى</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Our Services -->
+                <div class="col-lg-4 col-md-6 footer-links text-center">
+                    <h4 class="fs-5" style="font-size: 2rem;">خدماتنا</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" style="font-size: 1.2rem;">استشارة طبية</a></li>
+                        <li><a href="#" style="font-size: 1.2rem;">حجز موعد</a></li>
+                        <li><a href="#" style="font-size: 1.2rem;">سرعة الاستجابة</a></li>
+                        <li><a href="#" style="font-size: 1.2rem;">التغذية الصحية</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Social Media Section -->
+            <div class="row mt-4">
+                <div class="col-lg-12 text-center social-links">
+                    <a href="#" class="me-3" style="font-size: 1.5rem;"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="me-3" style="font-size: 1.5rem;"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="me-3" style="font-size: 1.5rem;"><i class="bi bi-instagram"></i></a>
+                    <a href="#" style="font-size: 1.5rem;"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

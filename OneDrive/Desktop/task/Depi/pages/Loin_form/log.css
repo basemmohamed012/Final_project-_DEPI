@@ -1,0 +1,151 @@
+body {
+    background-color: #f4f4f4;
+}
+.navbar-custom {
+    background-color: #0165a7; /* اللون الأزرق */
+  }
+ 
+  .navbar-brand  {
+    font-size: 2.5em; 
+    font-weight: bold;
+  }
+  .first-letter{
+      position: relative;
+      top: -5px;
+      right: 2px; 
+      border-bottom: 5px solid rgb(213, 51, 51);
+  }
+  .flag-icon {
+    width: 20px;
+    height: auto;
+  }
+  .com{
+      color: rgb(213, 51, 51);
+      font-size: 0.7em; /* جعل .com أصغر */
+  }
+  .btn-outline-light:hover{
+      color: #0165a7;
+  }
+  .navbar-toggler {
+    border-color: white; /* تغيير لون الحدود إلى الأبيض */
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(255,255,255,1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E'); /* تغيير لون الأيقونة إلى الأبيض */
+  }
+  
+.login-form {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+h3 {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    margin: 0;
+    text-align: center;
+}
+.form-body {
+    padding: 20px;
+    text-align: right;
+}
+.login-btn {
+    background-color: #ff4444;
+    color: white;
+}
+:placeholder-shown{
+    text-align: right;
+}
+.login-btn:hover {
+    background-color: #e63939;
+}
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+.separator::before {
+    margin-right: .25em;
+}
+.separator::after {
+    margin-left: .25em;
+}
+.error {
+    color: red;
+    font-size: 14px;
+}
+.footer {
+    background-color: #0165a7;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.footer-logo{
+    max-width: 50%;
+}
+
+.footer h4 {
+    margin-bottom: 15px;
+}
+
+.footer .social-links a {
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+
+
+
+
+/* جعل اسم الموقع والعناوين الرئيسية أكبر وحجم أكبر من العناصر الأخرى */
+.footer .sitename {
+    font-size: 3rem; /* تكبير اسم الموقع */
+    color: white;
+}
+
+.footer h4 {
+    font-size: 2rem; /* تكبير العناوين الرئيسية */
+    color: white;
+}
+
+/* جعل النصوص الأخرى والمعلومات لونها أبيض */
+.footer p,
+.footer p strong,
+.footer p span {
+    font-size: 1.2rem; /* يمكنك تعديل الحجم هنا */
+    color: white;
+}
+
+/* جعل الروابط باللون الأبيض */
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* تغيير لون الروابط عند التمرير */
+.footer a:hover {
+    color: #b6adad; /* لون الهوفر */
+}
+
+/* جعل أيقونات السوشيال ميديا باللون الأبيض */
+.footer .social-links a {
+    color: white;
+    font-size: 1.5rem; /* حجم الأيقونات */
+}
+
+/* تأثير الهوفر على أيقونات السوشيال ميديا */
+.footer .social-links a:hover {
+    color: rgb(124, 36, 36); /* لون الهوفر للأيقونات */
+}

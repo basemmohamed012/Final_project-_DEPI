@@ -1,0 +1,395 @@
+.navbar-custom {
+    background-color: #0165a7; /* اللون الأزرق */
+  }
+ 
+  .navbar-brand  {
+    font-size: 2.5em; 
+    font-weight: bold;
+  }
+  .first-letter{
+      position: relative;
+      top: -5px;
+      right: 2px; 
+      border-bottom: 5px solid rgb(213, 51, 51);
+  }
+  .flag-icon {
+    width: 20px;
+    height: auto;
+  }
+  .com{
+      color: rgb(213, 51, 51);
+      font-size: 0.7em; /* جعل .com أصغر */
+  }
+  .btn-outline-light:hover{
+      color: #0165a7;
+  }
+  .navbar-toggler {
+    border-color: white; /* تغيير لون الحدود إلى الأبيض */
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(255,255,255,1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E'); /* تغيير لون الأيقونة إلى الأبيض */
+  }
+  
+
+
+
+  .cover-section {
+    position: relative; /* استخدم relative بدلاً من absolute */
+    overflow: hidden; /* منع الفائض من الصورة */
+    height: 100vh; 
+    /* background: linear-gradient(to bottom right, #6c757d, #343a40); */
+
+}
+
+.cover-section .container {
+    height: 100%; /* تأكد من أن الحاوية تأخذ كامل ارتفاع القسم */
+}
+
+.cover-section h1 {
+    margin: 0; /* إزالة الهوامش */
+    color: #007bff; /* لون النص */
+    font-weight: bolder;
+    text-align: center; /* تغيير إلى center */
+    padding-top: 40px; /* إضافة padding أعلى */
+    padding-bottom: 25px; /* إضافة padding أسفل */
+}
+
+.cover-section p {
+    margin: 0; /* إزالة الهوامش */
+    color: #272cca; /* لون النص */
+    font-weight: 700;
+    text-align: center; /* تغيير إلى center */
+}
+
+.cover-section h1 span {
+    color: #d9534f; /* لون مخصص للنص */
+}
+
+.btn-primary {
+    background-color: #007bff; /* لون الزر */
+    border: none; /* إزالة الحدود */
+    width: 200px; /* عرض الزر */
+    height: 60px; /* ارتفاع الزر */
+    text-align: center; /* محاذاة النص في الزر */
+    font-weight: 600; /* وزن النص */
+    display: block; /* تغيير إلى block */
+    margin: 20px auto; /* هوامش تلقائية لتوسيع الزر في المنتصف */
+}
+
+.btn-primary:hover {
+    background-color: white; /* لون الخلفية عند التحويم */
+    color: #007bff; /* لون النص عند التحويم */
+    border: #007bff 1px solid; /* لون الحدود عند التحويم */
+}
+
+.img-fluid {
+    width: 100%; /*  تأكد من ملاءمة الصورة */
+    height: auto; /* استخدام auto لضبط الارتفاع تلقائيًا */
+    border-radius: 10px; /* إضافة الحواف المستديرة */
+}
+
+
+
+
+
+
+
+/*________________________________services___________________________*/
+
+.card {
+    transition: transform 0.2s, box-shadow 0.2s; /* تأثير التحويل */
+    border-radius: 15%;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* رفع البطاقة قليلاً عند التمرير */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* إضافة ظل أكبر */
+}
+
+/*___________________________________department_______________________*/
+
+
+
+.sec1{
+    margin-top: 150px;
+}
+.specialty-icon {
+    border: none;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.specialty-icon img {
+    width: 150px; /* زيادة عرض الصورة */
+    height: 150px; /* زيادة ارتفاع الصورة */
+    object-fit: cover; /* الحفاظ على نسبة العرض إلى الارتفاع */
+}
+
+.specialty-icon p {
+    margin-top: 10px; /* إضافة مسافة بين الصورة والنص */
+    text-align: center; /* محاذاة النص في المنتصف */
+}
+
+.carousel-item {
+    padding: 10px 0; /* إضافة مسافة بين العناصر في السلايدر */
+}
+
+/* تخصيص أزرار التنقل */
+.specialty-icon img {
+    width: 120%; /* تكبير حجم الصورة */
+    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    margin: 0 10px; /* تقليل المسافة بين الصور */
+}
+
+.specialty-icon {
+    margin-bottom: 20px; /* تعديل المسافة بين الصفوف */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: blue; /* تغيير لون الزر إلى الأزرق */
+    border-radius: 50%; /* شكل دائري للزر */
+}
+
+
+
+/*_________________________ counter____________________________*/
+
+.counter-box {
+background: #fff;
+border-radius: 10px;
+box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+padding: 30px 20px;
+transition: transform 0.3s;
+}
+
+.counter-box:hover {
+transform: translateY(-10px);
+}
+
+.icon {
+background-color: #007bff;
+color: white;
+width: 60px;
+height: 60px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+margin: 0 auto;
+}
+
+.counter {
+font-size: 36px;
+font-weight: bold;
+margin: 20px 0 10px;
+}
+
+p {
+font-size: 18px;
+color: #6c757d;
+}
+
+
+/*________________________Circle-layout-Comments____________________*/
+.circle-container {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+.avatar-center img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+}
+.avatar-surround img {
+    width: 80px;
+    height: 70px;
+}
+/*--------------------comments----------------*/
+.feedback{
+    background-color: rgb(20, 110, 180,0.1);
+
+}
+.testimonial {
+    background-color: #f8f9fa; /* خلفية فاتحة */
+    border: 1px solid #dee2e6; /* إطار خفيف */
+    border-radius: 10px; /* زوايا مدورة */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    transition: transform 0.3s; /* تأثير التحويل */
+}
+.testimonial:hover {
+    transform: scale(1.05); /* تأثير التكبير عند المرور */
+}
+/*--------------------Qestions-----------------*/
+.faq-section {
+    padding: 50px 0;
+    background-color: #f8f9fa; /* لون خلفية */
+}
+
+.faq-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.box-q{
+    border-radius: 50%;
+
+}
+.accordion-button.collapsed {
+    color: #125a98; /* اللون عند الانهيار */
+    text-align: left;
+}
+.accordion-button {
+    font-size: 1.25rem; /* زيادة حجم الخط */
+    padding: 15px 20px; /* زيادة ارتفاع الأزرار */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: left;
+}
+
+.accordion-button:hover {
+    background-color: #4280c2; /* لون الخلفية عند التمرير */
+    color: white; /* لون النص عند التمرير */
+}
+
+.accordion-body {
+    min-height: 100px; /* تحديد حد أدنى لارتفاع المحتوى */
+}
+
+.doctor-image {
+    max-width: 80%;
+    height: auto;
+}
+
+
+.faq-question {
+    color: #2c3e50;
+    font-weight: bold;
+    text-align: right;
+}
+/*--------------------Contact us------------*/
+
+.contact-form .form-control {
+    border-radius: 0.375rem; /* الزوايا المنحنية */
+    padding: 10px 15px; /* توسيع الحقول */
+    transition: border-color 0.3s ease; /* تأثير الانتقال */
+    font-size: 1.1rem; /* تكبير النص */
+}
+
+.contact-form .form-control:hover {
+    border-color: #198754; /* لون الحدود عند التحويم */
+}
+
+.contact-form .submit {
+    border-radius: 0.375rem; /* زوايا الزر المنحنية */
+    background-color: rgba(217, 83, 79); /* لون خلفية الزر */
+    color: #fff; /* لون النص */
+    transition: background-color 0.3s ease; /* تأثير الانتقال */
+    padding: 10px 0; /* زيادة ارتفاع الزر */
+    font-size: 1.2rem; /* تكبير نص الزر */
+}
+
+.contact-form .submit:hover {
+    background-color: rgba(161, 64, 60); /* لون الزر عند التحويم */
+}
+
+
+
+
+/*--------------------Footer----------------*/
+.footer {
+    background-color: #0165a7;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.footer-logo{
+    max-width: 50%;
+}
+
+.footer h4 {
+    margin-bottom: 15px;
+}
+
+.footer .social-links a {
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+
+
+
+
+/* جعل اسم الموقع والعناوين الرئيسية أكبر وحجم أكبر من العناصر الأخرى */
+.footer .sitename {
+    font-size: 3rem; /* تكبير اسم الموقع */
+    color: white;
+    direction: ltl;
+}
+
+.footer h4 {
+    font-size: 2rem; /* تكبير العناوين الرئيسية */
+    color: white;
+}
+
+/* جعل النصوص الأخرى والمعلومات لونها أبيض */
+.footer p,
+.footer p strong,
+.footer p span {
+    font-size: 1.2rem; /* يمكنك تعديل الحجم هنا */
+    color: white;
+}
+
+/* جعل الروابط باللون الأبيض */
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* تغيير لون الروابط عند التمرير */
+.footer a:hover {
+    color: #b6adad; /* لون الهوفر */
+}
+
+/* جعل أيقونات السوشيال ميديا باللون الأبيض */
+.footer .social-links a {
+    color: white;
+    font-size: 1.5rem; /* حجم الأيقونات */
+}
+
+/* تأثير الهوفر على أيقونات السوشيال ميديا */
+.footer .social-links a:hover {
+    color: rgb(124, 36, 36); /* لون الهوفر للأيقونات */
+}
+
+
+
+@media (max-width: 768px) {
+    .footer-about, .footer-links {
+        text-align: center;
+    }
+    .footer .logo {
+        justify-content: center;
+    }
+    .footer .social-links {
+        justify-content: center;
+    }
+    .footer h4 {
+        font-size: 1.5rem;
+    }
+    .footer .footer-contact p, .footer .footer-links ul {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
