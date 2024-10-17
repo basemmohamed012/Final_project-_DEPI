@@ -73,6 +73,7 @@ h1:hover {
 }
 .btn-custom:hover{
     background-color: #054570; 
+    color: white;
 }
 
 .modal-body{
