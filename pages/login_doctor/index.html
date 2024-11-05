@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Doctor Sign Up</title>
+    <style>
+        body {
+            font-family: "Cairo", sans-serif !important;
+            background-color: #f1f1f0; /* Body background color */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure body takes full height */
+        }
+        .sign-up-container {
+            max-width: 100%; /* Full width of container */
+            height: 40vh; /* Adjust height for dynamic content */
+            margin: 20px auto; /* Center the div and add space above */
+            border-radius: 8px; /* Optional: Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Shadow for depth */
+            padding: 40px; /* Increased padding inside the div */
+            position: relative; /* Positioning for the pseudo-element */
+            background-color: white; /* Set background color to white */
+            h4 {
+                width: fit-content;
+            }
+        }
+        .sign-up-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px; /* Height of the top border */
+            background: linear-gradient(to right, #0070cd 30%, #b6d6f0 30%); /* Gradient border */
+            z-index: 1; /* Ensure it's above the background */
+        }
+        .navbar-brand {
+            position: relative;
+            font-size: 24px; /* Adjust the font size as needed */
+        }
+        .navbar-brand .letter-a {
+            position: relative;
+            top: -8px; /* Move 'A' higher */
+        }
+        .navbar-brand .dot-com {
+            color: red; /* Color for .com */
+        }
+        .navbar-brand .underline {
+            position: absolute;
+            bottom: -2px; /* Adjust to position the line */
+            left: 0;
+            width: 10px; /* Width of the underline */
+            height: 2px; /* Thickness of the underline */
+            background-color: red;
+        }
+        .btn-custom {
+            background-color: white; /* Button background color */
+            border: 1px solid black; /* Solid black border */
+            color: #0070cd; /* Button text color */
+        }
+        footer {
+            background-color: #0070cd; /* Footer background color */
+            color: white; /* Footer text color */
+            padding: 20px 0; /* Padding for footer */
+            margin-top: auto; /* Push footer to the bottom */
+            
+        }
+    </style>
+
+ <!-- Google FONTS -->
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link
+   href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+   rel="stylesheet"
+ />
+    <link rel="stylesheet" href="../../css/navbar.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand text-white" href="../../index.html">
+                <span class="first-letter">A</span>l_hayat<span class="com">.com</span>
+            </a>
+        </div>
+    </nav>
+    
+
+<div class="container">
+    <div class="sign-up-container ">
+       
+    </div>
+</div>
+
+<footer>
+    <div class="container footer-top" style="background-color: #0070cd; padding: 20px 0;">
+        <div class="row g-4">
+            <div class="col-6 col-md-3  mb-3">
+                <h5 class="navbar-brand"><span class="letter-a">A</span>l Hayah <span class="dot-com">.com</span><span class="underline"></span></h5><br>
+                <a href="#" class="text-white">About Us</a><br>
+                <a href="#" class="text-white">Our Team</a><br>
+                <a href="#" class="text-white">Careers</a><br>
+                <a href="#" class="text-white">About Us</a><br>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <h5 class="navbar-brand">Search By</h5><br>
+                <a href="#" class="text-white">Speciality</a><br>
+                <a href="#" class="text-white">Area</a><br>
+                <a href="#" class="text-white">Insurance</a><br>
+                <a href="#" class="text-white">Hospital</a>
+            </div>
+            <div class="col-md-2 col-6 mb-3">
+                <h6>Are You A Doctor?</h6>
+                <a href="index.html" class="text-white">Join Al Hayah doctors</a>
+            </div>
+            <div class="col-md-2 col-6 mb-3">
+                <h5>Need Help?</h5>
+                <a href="#" class="text-white">Medical Library</a><br>
+                <a href="#" class="text-white">Contact Us</a><br>
+                <a href="#" class="text-white">Terms Of Use</a><br>
+                <a href="#" class="text-white">Privacy Policy</a><br>
+                <a href="#" class="text-white">Doctors Privacy Policy</a>
+            </div>
+            <div class="col-md-2 col-6 mb-3">
+                <a href="#"><img src="https://freeiconshop.com/wp-content/uploads/edd/google-play-badge.png" alt="Google Play" width="70"></a><br>
+                <a href="#"><img src="https://www.svgrepo.com/show/303128/download-on-the-app-store-apple-logo.svg" alt="App Store" width="70"></a><br>
+                <div>
+                    <a href="https://www.facebook.com/" target="_blank" style="margin-right: 15px;">
+                        <i class="fab fa-facebook text-white"></i>
+                    </a>
+                    <a href="https://www.x.com/" target="_blank" style="margin-right: 15px;">
+                        <i class="fab fa-x text-white"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <i class="fab fa-instagram text-white"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <p class="text-white">&copy; 2024 Al Hayah. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#continue-button').on('click', function() {
+            window.location.href = '../Register_Form_Doctor/nextpage.html';
+        });
+    });
+</script>
+
+<script>
+
+    const lang = localStorage.getItem("lang")
+    if (lang === "ar") {
+        document.documentElement.dir = "rtl";
+    } else {
+        document.documentElement.dir = "ltr";
+    }
+    document.querySelector(".sign-up-container").innerHTML = ` 
+    <h4>
+        ${lang==="en" ? "Create a new account" : "أنشاء حساب جديد" }
+        
+        </h4>
+        <div class="text-center ">
+            <button class="btn btn-custom " id="continue-button">
+                <i class="fa-regular fa-envelope"></i>    ${lang==="en" ? "Continue with email" : "استمر بالايميل" } 
+            </button>
+        </div>
+        <p class="text-center mt-3">
+                ${lang==="en" ? "Already have an account?" : "هل لديك حساب؟" } <a href="./login.html" style="color: #0070cd;">${lang==="en" ? "Login" : "تسجيل دخول" }</a>
+        </p>`
+</script>
+</body>
+</html>

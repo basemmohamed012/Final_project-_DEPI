@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Personal Info</title>
+    <style>
+        body {
+            padding-top: 56px; /* Space for the fixed navbar */
+            background-color: #f1f1f0; /* Body background color */
+        }
+        .personal-info-container {
+            max-width: 100%; /* Full width of container */
+            margin: 20px auto; /* Center the div and add space above */
+            padding: 40px; /* Padding inside the div */
+            background-color: white; /* Set background color to white */
+            border-radius: 8px; /* Optional: Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Shadow for depth */
+            position: relative; /* Positioning for the pseudo-element */
+        }
+        .personal-info-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px; /* Height of the top border */
+            background: linear-gradient(to right, #0070cd 60%, #b6d6f0 60%); /* Gradient border */
+            z-index: 1; /* Ensure it's above the background */
+        }
+        .error-message {
+            color: red; /* Error message color */
+            display: none; /* Hidden by default */
+            margin-top: 5px; /* Space above the error message */
+        }
+        .upload-btn {
+            background-color: #d3d3ce; /* Solid blue background */
+            border-radius: 50%;
+            width: 200px; /* Increased size for the button */
+            height: 200px; /* Increased size for the button */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin: 20px auto; /* Center the button */
+            color: white; /* Text color */
+            font-weight: bold; /* Bold text */
+        }
+        .navbar-brand {
+            position: relative;
+            font-size: 24px; /* Adjust the font size as needed */
+        }
+        .navbar-brand .letter-a {
+            position: relative;
+            top: -8px; /* Move 'A' higher */
+        }
+        .navbar-brand .dot-com {
+            color: red; /* Color for .com */
+        }
+        .navbar-brand .underline {
+            position: absolute;
+            bottom: -2px; /* Adjust to position the line */
+            left: 0;
+            width: 10px; /* Width of the underline */
+            height: 2px; /* Thickness of the underline */
+            background-color: red;
+        }
+        .form-group.row {
+            margin-bottom: 1rem; /* Adjust bottom margin */
+        }
+        .country-flag {
+            width: 40px; /* Width for the country flag */
+            margin-right: 10px; /* Space between flag and input */
+        }
+        .mobile-input {
+            border: none;
+            border-bottom: 1px solid #000000; /* Bottom border only */
+            width: 75%; /* Mobile number input width */
+            margin-left: 5%; /* Space between country flag and mobile input */
+        }
+        .form-control {
+            border: none; /* Remove all borders */
+            border-bottom: 1px solid #000000; /* Bottom border only */
+            border-radius: 0; /* No rounded corners */
+            transition: border-color 0.3s;
+        }
+        .form-control.error {
+            border-color: red; /* Red border on error */
+            background-color: #ffe6e6; /* Light red background on error */
+        }
+        .submit-button {
+            background-color: #0070cd; /* Blue background */
+            color: white; /* White text */
+            width: 200px; /* Width for the submit button */
+            margin: 20px auto; /* Center the button */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #0070cd;">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">
+                <span class="letter-a">A</span>l Hayah <span class="dot-com">.com</span>
+                <span class="underline"></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="images/eg.png" alt="Egypt Flag" width="20" height="15"> Egypt
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#"><img src="images/lb.png" alt="Lebanon Flag" width="20" height="15"> Lebanon</a>
+                            <a class="dropdown-item" href="#"><img src="images/ke.png" alt="Kenya Flag" width="20" height="15"> Kenya</a>
+                            <a class="dropdown-item" href="#"><img src="images/ng.png" alt="Nigeria Flag" width="20" height="15"> Nigeria</a>
+                            <a class="dropdown-item" href="#"><img src="images/sa.png" alt="Saudi Arabia Flag" width="20" height="15"> Saudi Arabia</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="container">
+    <div class="personal-info-container">
+        <h4>
+            <a class="icon-link" href="index.html" style="text-decoration: none; color: #0070cd;  padding: 5px 10px; border-radius: 5px;">
+                <i class="fa-solid fa-left-long"></i>
+            </a>
+            Enter your personal info
+        </h4>
+        <p>This is your personal account information, you will be prompted next for your clinic/hospital information.</p>
+
+        <div class="row mb-3">
+            <div class="col-4 text-center">
+                <label class="upload-btn" id="upload-button">
+                    <input type="file" accept="image/*" style="display: none;" />
+                    <i class="fa-solid fa-camera" style="font-size: 24px;"></i>
+                    <span>Upload</span>
+                </label>
+            </div>
+            <div class="col-8">
+                <form id="personal-form">
+                    <div class="form-group row">
+                        <div class="col-6">
+                            <input type="text" class="form-control" id="first-name" placeholder="First Name" required>
+                            <div class="error-message" id="first-name-error">First name is required.</div>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control" id="last-name" placeholder="Last Name" required>
+                            <div class="error-message" id="last-name-error">Last name is required.</div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-2 d-flex align-items-center">
+                            <img src="images/eg.png" alt="Egypt Flag" class="country-flag"> +20
+                        </div>
+                        <div class="col-10">
+                            <input type="text" class="form-control mobile-input" id="mobile-number" placeholder="Mobile Number" required>
+                            <div class="error-message" id="mobile-error">Mobile number is required.</div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <select class="form-control" id="specialty" required>
+                                <option value="">Select Specialty</option>
+                                <option value="Cardiology">Dentist</option>
+                                <option value="Dermatology">Dermatology</option>
+                                <option value="Pediatrics">Orthopedics</option>
+                                <option value="Surgery">Surgery</option>
+                                <option value="Surgery">Ear, Nose, and Throat</option>
+                            </select>
+                            <div class="error-message" id="specialty-error">Specialty is required.</div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <input type="email" class="form-control" id="email" placeholder="Email" required>
+                            <div class="error-message" id="email-error">Email is required.</div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <input type="password" class="form-control" id="password" placeholder="Password" required>
+                            <div class="error-message" id="password-error">Password is required.</div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn submit-button">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(document).ready(function() {
+      
+
+        $('#personal-form').on('submit', function(e) {
+            e.preventDefault(); // Prevent form submission
+            let valid = true;
+
+            // Hide all error messages and reset input colors
+            $('.error-message').hide();
+            $('.form-control').removeClass('error');
+
+            // Validate fields
+            if ($('#first-name').val() === '') {
+                $('#first-name-error').show();
+                $('#first-name').addClass('error');
+                valid = false;
+            }
+            if ($('#last-name').val() === '') {
+                $('#last-name-error').show();
+                $('#last-name').addClass('error');
+                valid = false;
+            }
+            if ($('#mobile-number').val() === '') {
+                $('#mobile-error').show();
+                $('#mobile-number').addClass('error');
+                valid = false;
+            }
+            if ($('#specialty').val() === '') {
+                $('#specialty-error').show();
+                $('#specialty').addClass('error');
+                valid = false;
+            }
+            if ($('#email').val() === '') {
+                $('#email-error').show();
+                $('#email').addClass('error');
+                valid = false;
+            }
+            if ($('#password').val() === '') {
+                $('#password-error').show();
+                $('#password').addClass('error');
+                valid = false;
+            }
+
+            // If valid, proceed with submission (or your desired action)
+            if (valid) {
+                alert("Form submitted successfully!");
+                // Here you can add your form submission logic
+            }
+        });
+    });
+</script>
+</body>
+</html>
+

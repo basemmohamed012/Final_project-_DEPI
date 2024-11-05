@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>عيادة الحياة</title>
+
+    <!-- Bootstrap Icons -->
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <link rel="icon" href="images/doctor.png" />
+    <!-- bootstrap -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+ 
+
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../css/navbar.css">
+  
+
+    <!-- Google FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container">
+          <a class="navbar-brand text-white" href="index.html">
+              <span class="first-letter">A</span>l_hayat<span class="com">.com</span>
+          </a>
+  
+          <i
+              id="open-nav"
+              class="fas fa-bars text-white d-lg-none"
+              style="font-size: 24px; cursor: pointer"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+          ></i>
+  
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="direction: inherit;">
+              <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">القائمة</h5>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                  <ul class="navbar-nav ">
+                      <li class="nav-item">
+                          <a id="articles" class="nav-link text-white" href="/pages/makalat/makalat.html" >مقالات</a>
+                      </li>
+
+                      <li class="nav-item lang">
+                      </li>
+                      
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </nav>
+  
+  
+    
+    
+
+    <section class="cover-section position-relative">
+      <div class="position-relative">
+        <!-- شكل القلب -->
+        <div class="row align-items-center justify-content-end h-100">
+
+          <div class="col-12 col-md-6 text-center d-flex flex-column justify-content-center">
+          <p id="cover-lead" class="lead">أعلى مستوى من الخدمة يمكنك الحصول عليها.</p>
+          <h1 id="cover-title" class="display-4">
+            اعتنِ <span class="fw-bold">بصحتك </span>الآن
+            <!-- Take care of your <span class="fw-bold">health</span> now -->
+
+          </h1>
+          <p id="cover-description" class="mt-4 description">
+            نحن هنا لنقدم لك أفضل العلاجات والرعاية الصحية التي تستحقها.
+            فريقنا من الخبراء متواجد لمساعدتك في جميع احتياجاتك الطبية.
+          </p>
+          <a href="#sec1" id="cover-button" class="btn btn-primary btn-lg mt-4">احجز موعدًا</a>
+        </div>
+
+
+          <div
+          class="col-12 col-md-6  d-none d-md-block position-relative"
+        >
+          <div class="heart-shape"></div>
+          <img
+            src="../images/doctor.png"
+            class="img-fluid"
+            alt="Background"
+            style="
+              border-radius: 10px;
+              height: 100%;
+              object-fit: cover;
+              z-index: 2;
+            "
+          />
+        </div>
+        
+         
+        
+        </div>
+      </div>
+    </section>
+    <!------------------------------------------- Services ----------------------------------------->
+
+    <section id="sec1" class="sec1">
+      <div class="container">
+          <h2  id="specialty-title" class="text-center mb-4">احجز كشف حسب التخصص</h2>
+          <div class="swiper-container position-relative">
+              <div class="swiper-wrapper">
+
+                
+                <div class="swiper-slide">
+                      <a style="text-decoration: none;" href="/pages/جراحة/جراحة.html">
+                      <div class="specialty-item">
+                          <img src="../images/desktop (6).jpeg" alt="جراحة" />
+                          <p id="Surgery">جراحة</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a style="text-decoration: none;" href="/pages/أسنان/أسنان.html">
+                      <div class="specialty-item">
+                        <img src="../images/desktop (2).jpeg" alt="أسنان" />
+                        <p id="dentistry">أسنان</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a style="text-decoration: none;" href="/pages/جلدية/جلدية.html">
+                      <div class="specialty-item">
+                        <img src="../images/desktop (3).jpeg" alt="جلدية" />
+                          <p id="dermatology">جلدية</p>
+                        </div>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a style="text-decoration: none;" href="/pages/جلدية/جلدية.html">
+                      <div class="specialty-item">
+                        <img src="../images/desktop (10).jpeg" alt="عظام" />
+                        <p id="orthopedics">عظام</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a style="text-decoration: none;" href="/pages/earnoseandthroatdoctor/earnoseandthroatdoctor.html">
+                      <div class="specialty-item">
+                        <img src="../images/desktop (8).jpeg" alt="أنف و أذن" />
+                        <p id="ent">أنف و أذن</p>
+                      </div>
+                    </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+</section>
+
+  
+  
+
+    
+
+    <section class="counter-section py-5">
+      <div class="container-fluid">
+        <div
+          class="row text-center"
+          data-aos="slide-up"
+          data-aos-duration="2000"
+          data-aos-delay="500"
+        >
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="counter-box">
+              <div class="icon mb-2">
+                <i class="fas fa-user-md fa-2x"></i>
+              </div>
+              <h3 class="counter">85</h3>
+              <p>Doctors</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="counter-box">
+              <div class="icon mb-2">
+                <i class="fas fa-hospital fa-2x"></i>
+              </div>
+              <h3 class="counter">18</h3>
+              <p>Departments</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="counter-box">
+              <div class="icon mb-2">
+                <i class="fas fa-flask fa-2x"></i>
+              </div>
+              <h3 class="counter">12</h3>
+              <p>Research Labs</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="counter-box">
+              <div class="icon mb-2">
+                <i class="fas fa-award fa-2x"></i>
+              </div>
+              <h3 class="counter">150</h3>
+              <p>Awards</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----------------------------------- comments ------------------------------>
+
+    <section class="testimonials py-4">
+      <div class="container-fluid px-5">
+          <div
+              class="row"
+              data-aos="slide-up"
+              data-aos-duration="2000"
+              data-aos-delay="400"
+          >
+
+
+
+          <div class="col-md-6 order-1 order-md-2 position-relative">
+            <div class="circle-container">
+                <!-- الصورة في المنتصف -->
+                <div class="avatar-center">
+                    <img
+                        src="../images/person2.jpg"
+                        class="rounded-circle"
+                        alt="عميل"
+                    />
+                </div>
+                <!-- الصور المحيطة -->
+                <div class="avatar-surround">
+                    <img
+                        src="../images/person.jpg"
+                        class="rounded-circle position-absolute"
+                        style="top: -9px; left: 45%"
+                        alt="عميل"
+                    />
+                    <img
+                        src="../images/person4.jpg"
+                        class="rounded-circle position-absolute"
+                        style="top: 30%; right: 10%"
+                        alt="عميل"
+                    />
+                    <img
+                        src="../images/person3.jpg"
+                        class="rounded-circle position-absolute"
+                        style="bottom: 10%; right: 20%"
+                        alt="عميل"
+                    />
+                    <img
+                        src="../images/person5.jpg"
+                        class="rounded-circle position-absolute"
+                        style="bottom: 10%; left: 20%"
+                        alt="عميل"
+                    />
+                    <img
+                        src="../images/person6.jpg"
+                        class="rounded-circle position-absolute"
+                        style="top: 30%; left: 10%"
+                        alt="عميل"
+                    />
+                </div>
+            </div>
+        </div>
+
+
+          <div class="comments-slider col-md-6 order-2 order-md-1 mx-auto">
+                  <h2 id="testimonials-title" class="text-center mb-4">آراء بعض المرضى</h2>
+                  <div
+                      id="feedback"
+                      class="carousel slide feedback"
+                      data-bs-ride="carousel"
+                  >
+                      <div class="carousel-inner p-2">
+                          <div class="carousel-item active">
+                              <div class="testimonial p-3 rounded">
+                                  <i class="bi bi-chat-left-text display-4 text-warning"></i>
+                                  <h4 id="testimonial1">"تجربة رائعة مع عيادة الحياة، أوصي بها تمامًا."</h4>
+                                  <h5 id="client1">كريم السيد</h5>
+                                  <p id="position1">موظف</p>
+                                  <span class="text-warning">★★★★★</span>
+                              </div>
+                          </div>
+                          <div class="carousel-item">
+                              <div class="testimonial p-3 rounded">
+                                  <i class="bi bi-chat-left-text display-4 text-warning"></i>
+                                  <h4 id="testimonial2">"دكاترة ممتازين وذات خبرة، راضٍ تمامًا"</h4>
+                                  <h5 id="client2">عمر أحمد</h5>
+                                  <p id="position2">مدرس</p>
+                                  <span class="text-warning">★★★★★</span>
+                              </div>
+                          </div>
+                      </div>
+  
+                      <!-- عناصر التحكم -->
+                      <button
+                          class="carousel-control-prev text-success"
+                          type="button"
+                          data-bs-target="#feedback"
+                          data-bs-slide="prev"
+                      >
+                          <span
+                              class="carousel-control-prev-icon"
+                              aria-hidden="true"
+                          ></span>
+                          <span class="visually-hidden">السابق</span>
+                      </button>
+                      <button
+                          class="carousel-control-next text-success"
+                          type="button"
+                          data-bs-target="#feedback"
+                          data-bs-slide="next"
+                      >
+                          <span
+                              class="carousel-control-next-icon"
+                              aria-hidden="true"
+                          ></span>
+                          <span class="visually-hidden">التالي</span>
+                      </button>
+                  </div>
+              </div>
+  
+              
+          </div>
+      </div>
+  </section>
+
+    <!----------------------------------- End comments -------------------------->
+
+
+    <!---------------------------------------contac us------------------------------->
+    <section
+      id="contact"
+      class="contact section"
+      style="background: rgb(166, 202, 234, 0.2); padding: 50px 0"
+    >
+      <div class="container section-title text-center">
+        <h2 style="color: #d9534f">تواصل معنا</h2>
+        <p style="color: #6c757d">تواصل معنا لأي استفسارات أو دعم!</p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <form action="#" class="contact-form" id="contact-form">
+              <div class="form-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="اسمك"
+                  name="name"
+                  required
+                />
+              </div>
+              <div class="form-group mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="البريد الإلكتروني"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="form-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="الموضوع"
+                  name="subject"
+                  required
+                />
+              </div>
+              <div class="form-group mb-3">
+                <textarea
+                  cols="30"
+                  rows="5"
+                  class="form-control"
+                  placeholder="الرسالة"
+                  name="message"
+                  required
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="form-control submit px-3">
+                  إرسال
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--------------------------------- footer ----------------------------------->
+    <footer id="footer" class="footer light-background">
+      <div class="container footer-top">
+        <div class="row g-4">
+          <!-- Footer About Section -->
+          <div class="col-lg-4 col-md-6 footer-about text-center">
+            <a
+              class="navbar-brand text-white"
+              href="#"
+              style="font-size: 2.2rem; margin-bottom: 20px"
+            >
+              <span class="first-letter">A</span>l_hayat<span class="com"
+                >.com</span
+              >
+            </a>
+
+            <ul class="list-unstyled">
+              <li style="font-size: 1.2rem">شارع الأمل A108</li>
+              <li style="font-size: 1.2rem">535022 كفر الشيخ، مصر</li>
+              <li style="font-size: 1.2rem">
+                <strong>الهاتف:</strong> +20 123 456 7890
+              </li>
+              <li style="font-size: 1.2rem">
+                <strong>البريد الإلكتروني:</strong> info@alhayah.com
+              </li>
+            </ul>
+          </div>
+
+          <!-- Useful Links -->
+          <div class="col-lg-4 col-md-6 footer-links text-center">
+            <h4 class="fs-5" style="font-size: 2rem">روابط مفيدة</h4>
+            <ul class="list-unstyled">
+              <li><a href="#" style="font-size: 1.2rem">الرئيسية</a></li>
+              <li><a href="#" style="font-size: 1.2rem">عننا</a></li>
+              <li><a href="#" style="font-size: 1.2rem">خدماتنا</a></li>
+              <li>
+                <a href="#" style="font-size: 1.2rem">الأسئلة المتكررة</a>
+              </li>
+              <li><a href="#" style="font-size: 1.2rem">تعليقات المرضى</a></li>
+            </ul>
+          </div>
+
+          <!-- Our Services -->
+          <div class="col-lg-4 col-md-6 footer-links text-center">
+            <h4 class="fs-5" style="font-size: 2rem">خدماتنا</h4>
+            <ul class="list-unstyled">
+              <li><a href="#" style="font-size: 1.2rem">استشارة طبية</a></li>
+              <li><a href="#" style="font-size: 1.2rem">حجز موعد</a></li>
+              <li><a href="#" style="font-size: 1.2rem">سرعة الاستجابة</a></li>
+              <li><a href="#" style="font-size: 1.2rem">التغذية الصحية</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="row mt-4">
+          <div class="col-lg-12 text-center social-links">
+            <a href="#" class="me-3" style="font-size: 1.5rem"
+              ><i class="bi bi-twitter"></i
+            ></a>
+            <a href="#" class="me-3" style="font-size: 1.5rem"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="#" class="me-3" style="font-size: 1.5rem"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a href="#" style="font-size: 1.5rem"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <!-- Bootstrap JS (Popper.js for dropdowns) -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    
+    <script
+      src="https://kit.fontawesome.com/e049c3d957.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "0gkyI-ct_UN6S0V3L",
+        });
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // these IDs from the previous steps
+            emailjs.send("service_bas012man", "template_0pd87qv").then(
+              () => {
+                alert("SUCCESS!");
+              },
+              (error) => {
+                alert("FAILED...", error);
+              }
+            );
+          });
+      };
+    </script>
+    <script src="main.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="translations.js"></script>
+    <script src="../js/navbar.js"></script>
+
+  </body>
+</html>

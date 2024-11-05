@@ -1,0 +1,111 @@
+body {
+    
+    font-family: "Cairo", sans-serif;
+}
+.header-title {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+h1 {
+    display: inline-block;
+    position: relative;
+}
+
+.underline {
+    width: 150px;
+    height: 4px;
+    background-color: rgba(217, 83, 79) ;
+    margin: 0 auto;
+    position: relative;
+    top: 10px;
+    transition: width 0.4s ease-in-out;
+}
+
+.header-title:hover .underline {
+    width: 200px; 
+}
+
+h1:hover {
+    color: rgb(127, 45, 42);
+    transition: color 0.4s ease-in-out;
+}
+
+/*########################################3*/
+.article-card {
+    background-color: #fdfeff;;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.article-card:hover {
+    transform: translateY(-10px);
+}
+
+.article-card img {
+    /* padding: 10px 10px 0px 10px; */
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+
+.modal-body{
+    max-height: 600px; 
+    overflow-y: auto;
+}
+.modal-body p{
+    /* font-size:30px; */
+    color:#0a2e54;
+}
+.modal-body ul li{
+    /* font-size:25px; */
+    color:#44484c;
+}
+
+@media (max-width: 576px) {
+.modal-dialog {
+    max-width: 90%; /* حجم المودال للشاشات الصغيرة */
+}
+.modal-body{
+    max-height: 300px; 
+}
+.modal-body p{
+    font-size:15px;
+}
+.modal-body ul li{
+    font-size:13px;
+}
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+.modal-dialog {
+    max-width: 80%; /* حجم المودال للشاشات المتوسطة */
+}
+.modal-body{
+    max-height: 450px; 
+}
+.modal-body p{
+    font-size:20px;
+}
+.modal-body ul li{
+    font-size:18px;
+}
+}
+
+@media (min-width: 769px) {
+.modal-dialog {
+    max-width: 50%; /* حجم المودال للشاشات الكبيرة */
+}
+.modal-body{
+    max-height: 700px; 
+}
+.modal-body p{
+    font-size:30px;
+}
+.modal-body ul li{
+    font-size:25px;
+}
+}

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Personal Info</title>
+    <style>
+        body {
+            padding-top: 56px; /* Space for the fixed navbar */
+            background-color: #f1f1f0; /* Body background color */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure body takes full height */
+        }
+        .personal-info-container {
+            max-width: 100%;
+            margin: 20px auto;
+            padding: 40px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .personal-info-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, #0070cd 60%, #b6d6f0 60%);
+            z-index: 1;
+        }
+        .error-message {
+            color: red;
+            display: none;
+            margin-top: 5px;
+        }
+        .upload-btn {
+            background-color: #d3d3ce;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin: 20px auto;
+            color: white;
+            font-weight: bold;
+        }
+        .navbar-brand {
+            position: relative;
+            font-size: 24px;
+        }
+        .navbar-brand .letter-a {
+            position: relative;
+            top: -8px;
+        }
+        .navbar-brand .dot-com {
+            color: red;
+        }
+        .navbar-brand .underline {
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 10px;
+            height: 2px;
+            background-color: red;
+        }
+        .form-group.row {
+            margin-bottom: 1rem;
+        }
+        .country-flag {
+            width: 40px;
+            margin-right: 10px;
+        }
+        .mobile-input {
+            border: none;
+            border-bottom: 1px solid #000000;
+            width: 75%;
+            margin-left: 5%;
+        }
+        .form-control {
+            border: none;
+            border-bottom: 1px solid #000000;
+            border-radius: 0;
+            transition: border-color 0.3s;
+        }
+        .form-control.error {
+            border-color: red;
+            background-color: #ffe6e6;
+        }
+        .submit-button {
+            background-color: #0070cd;
+            color: white;
+            width: 200px;
+            margin: 20px auto;
+        }
+        .selected-sub-specialties {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .sub-specialty-item {
+            background-color: #0070cd;
+            color: white;
+            border-radius: 15px;
+            padding: 5px 10px;
+            margin: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .sub-specialty-item .remove {
+            margin-left: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        footer {
+            background-color: #0070cd; /* Footer background color */
+            color: white; /* Footer text color */
+            padding: 20px 0; /* Padding for footer */
+            margin-top: auto; /* Push footer to the bottom */
+            
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+    <div class="personal-info-container">
+        <h4>
+            <a class="icon-link" href="index.html" style="text-decoration: none; color: #0070cd; padding: 5px 10px; border-radius: 5px;">
+                <i class="fa-solid fa-left-long"></i>
+            </a>
+            Enter your personal info
+        </h4>
+        <p>This is your personal account information, you will be prompted next for your clinic/hospital information.</p>
+
+        <div class="row mb-3">
+            <div class="col col-md-4 text-center">
+                <label class="upload-btn" id="upload-button">
+                    <input type="file" accept="image/*" style="display: none;" />
+                    <i class="fa-solid fa-camera" style="font-size: 24px;"></i>
+                    <span>Upload</span>
+                </label>
+            </div>
+            <div class="col-md-8">
+                <form id="personal-form">
+                    <div class="form-group row">
+                        <div class="col">
+                            <input type="text" class="form-control" id="full-name" placeholder="Full Name" required>
+                            <div class="error-message" id="full-name-error">full name is required.</div>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" class="form-control" id="full-name-ar" placeholder="الاسم بالعربية" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <input type="email" class="form-control" id="email" placeholder="Email" required>
+                            <div class="error-message" id="email-error">Email is required.</div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <input type="password" class="form-control" id="password" placeholder="Password" required>
+                            <div class="error-message" id="password-error">Password is required.</div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <select class="form-control" id="job-title" required>
+                                <option value="">Select Job Title</option>
+                                <option value="Consultant">Consultant</option>
+                                <option value="Specialist">Specialist</option>
+                            </select>
+                            <div class="error-message" id="job-title-error">Job title is required.</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <select class="form-control" id="specialty" required>
+                                <option value="">Select Specialty</option>
+                                <option value="Dentist | اسنان">Dentist</option>
+                                <option value="Dermatology | جلدية">Dermatology</option>
+                                <option value="Surgery | جراحه">Surgery</option>
+                                <option value="ENT | أنف وأذن و حنجرة">Ear, Nose, and Throat</option>
+                                <option value="Orthopedics | عظام">Orthopedics</option>
+                            </select>
+                            <div class="error-message" id="specialty-error">Specialty is required.</div>
+                        </div>
+                    </div>
+                    <div class="form-group row" id="sub-specialty-container" style="display: none;">
+                        <div class="col-12">
+                            <select class="form-control" id="sub-specialty">
+                                <option value="">Select Sub-Specialty</option>
+                                <option value="Cosmetic Dentistry | تجميل اسنان">Cosmetic Dentistry</option>
+                                <option value="Root Canal Treatment | حشو وعلاج الجذور والاعصاب ">Root Canal Treatment</option>
+                                <option value="Gum Treatment | علاج اللثة ">Gum Treatment</option>
+                                <option value="Jaw and Facial Surgery | علاج اللثة، جراحة وجه وفكين ">Jaw and Facial Surgery</option>
+                                <option value="Orthodontics | تقويم اسنان ">Orthodontics</option>
+                                <option value="Dental Prosthetics | تركيبات اسنان ">Dental Prosthetics</option>
+                                <option value="Dental Implants | زراعة اسنان ">Dental Implants</option>
+                                <option value="Pediatric Dentistry | اسنان اطفال ">Pediatric Dentistry</option>
+                                <option value="Geriatric Dentistry | اسنان مسنين ">Geriatric Dentistry</option>
+                                <option value="Dental X-rays | اشعة الاسنان ">Dental X-rays</option>
+                                <option value="Adult Dentistry | اسنان بالغين ">Adult Dentistry</option>
+                                <option value="Pediatric Vascular Surgery | جراحة أوعية دموية أطفال ">Pediatric Vascular Surgery</option>
+                                <option value="Adult Vascular Surgery | جراحة أوعية دموية بالغين ">Adult Vascular Surgery</option>
+                                <option value="Diabetic Foot Treatment | وعلاج قدم سكري. ">Diabetic Foot Treatment</option>
+                                <option value="Adult Dermatology | وأمراض ذكورة ">Adult Dermatology</option>
+                                <option value="Male Disorders | جلدية بالغين ">Male Disorders</option>
+                                <option value="Adult Orthopedic Surgery | جراحة عظام بالغين ">Adult Orthopedic Surgery</option>
+                                <option value="Foot and Ankle Surgery | عظام القدم والكاحل ">Foot and Ankle Surgery</option>
+                                <option value="Orthopedic Correction | تقويم عظام ">Orthopedic Correction</option>
+                                <option value="Sports Injuries | إصابات ملاعب ">Sports Injuries</option>
+                                <option value="Joint Arthroscopy | ومناظير مفاصل ">Joint Arthroscopy</option>
+                                <option value="Adult Ear, Nose, and Throat |  أنف وأذن وحنجرة بالغين ">Adult Ear, Nose, and Throat</option>
+                                <option value="Hearing and Balance Disorders | اضطرابات السمع والتوازن ">Hearing and Balance Disorders</option>
+                                <option value="Pediatric Ear, Nose, and Throat Surgery | جراحة أنف وأذن وحنجرة أطفال ">Pediatric Ear, Nose, and Throat Surgery</option>
+                            </select>
+                        </div>
+                        <div class="selected-sub-specialties" id="selected-sub-specialties"></div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <input type="text" class="form-control" id="location" placeholder="Location" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <input type="number" class="form-control" id="price" placeholder="Price" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <input type="number" class="form-control" id="waiting-time" placeholder="Waiting Time (minutes)" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-12">
+                            <textarea class="form-control" id="doctor-info" placeholder="Information About the Doctor" rows="3" required></textarea>
+                            <div class="error-message" id="doctor-info-error">Information about the doctor is required.</div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn submit-button">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container footer-top" style="background-color: #0070cd; padding: 20px 0;">
+        <div class="row g-4">
+            <div class="col-6 col-md-3  mb-3">
+                <h5 class="navbar-brand"><span class="letter-a">A</span>l Hayah <span class="dot-com">.com</span><span class="underline"></span></h5><br>
+                <a href="#" class="text-white">About Us</a><br>
+                <a href="#" class="text-white">Our Team</a><br>
+                <a href="#" class="text-white">Careers</a><br>
+                <a href="#" class="text-white">About Us</a><br>
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+                <h5 class="navbar-brand">Search By</h5><br>
+                <a href="#" class="text-white">Speciality</a><br>
+                <a href="#" class="text-white">Area</a><br>
+                <a href="#" class="text-white">Insurance</a><br>
+                <a href="#" class="text-white">Hospital</a>
+            </div>
+            <div class="col-md-2 col-6 mb-3">
+                <h6>Are You A Doctor?</h6>
+                <a href="index.html" class="text-white">Join Al Hayah doctors</a>
+            </div>
+            <div class="col-md-2 col-6 mb-3">
+                <h5>Need Help?</h5>
+                <a href="#" class="text-white">Medical Library</a><br>
+                <a href="#" class="text-white">Contact Us</a><br>
+                <a href="#" class="text-white">Terms Of Use</a><br>
+                <a href="#" class="text-white">Privacy Policy</a><br>
+                <a href="#" class="text-white">Doctors Privacy Policy</a>
+            </div>
+            <div class="col-md-2 col-6 mb-3">
+                <a href="#"><img src="https://freeiconshop.com/wp-content/uploads/edd/google-play-badge.png" alt="Google Play" width="70"></a><br>
+                <a href="#"><img src="https://www.svgrepo.com/show/303128/download-on-the-app-store-apple-logo.svg" alt="App Store" width="70"></a><br>
+                <div>
+                    <a href="https://www.facebook.com/" target="_blank" style="margin-right: 15px;">
+                        <i class="fab fa-facebook text-white"></i>
+                    </a>
+                    <a href="https://www.x.com/" target="_blank" style="margin-right: 15px;">
+                        <i class="fab fa-x text-white"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <i class="fab fa-instagram text-white"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <p class="text-white">&copy; 2024 Al Hayah. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const selectedSubSpecialties = new Set();
+
+    const subSpecialtyOptions = {
+        ar :{
+            "اسنان":[
+                "دكتورة اسنان متخصص في ",
+                "تجميل اسنان",
+                "حشو وعلاج الجذور والاعصاب",
+                "علاج اللثة",
+                " جراحة وجه وفكين",
+                "تقويم اسنان",
+                " تركيبات اسنان",
+                "زراعة اسنان",
+                "اسنان اطفال",
+                "اسنان مسنين",
+                "اشعة الاسنان",
+                "اسنان بالغين",
+            ],
+            "جراحه":[
+            "دكتور جراحة أوعية دموية متخصص في",
+            "جراحة أوعية دموية أطفال",
+            "جراحة أوعية دموية بالغين",
+            "وعلاج قدم سكري.",
+            ],
+
+            "جلدية": [
+            "دكتور جلدية متخصص في ",
+            "جلدية بالغين",
+            "وأمراض ذكورة"
+            ],
+
+            "عظام":[
+                "دكتور عظام متخصص في ",
+                "جراحة عظام بالغين",
+                "عظام القدم والكاحل",
+                "تقويم عظام",
+                "إصابات ملاعب",
+                "ومناظير مفاصل",
+            ],
+            
+            "أنف وأذن و حنجرة": [
+                "دكتور أنف وأذن وحنجرة متخصص في",
+                "جراحة أنف وأذن وحنجرة بالغين",
+                "اضطرابات السمع والتوازن",
+                "جراحة أنف وأذن وحنجرة أطفال",
+            ]
+        } ,
+        en : {
+            'Dentist': [
+            'Cosmetic Dentistry', 'Root Canal Treatment', 'Gum Treatment', 
+            'Jaw and Facial Surgery', 'Orthodontics', 'Dental Prosthetics', 
+            'Dental Implants', 'Pediatric Dentistry', 'Geriatric Dentistry', 
+            'Dental X-rays', 'Adult Dentistry'
+        ],
+        'Surgery': [
+            'Pediatric Vascular Surgery', 'Adult Vascular Surgery', 
+            'Diabetic Foot Treatment'
+        ],
+        'Dermatology': [
+            'Adult Dermatology', 'Male Disorders'
+        ],
+        'Orthopedics': [
+            'Adult Orthopedic Surgery', 'Foot and Ankle Surgery', 
+            'Orthopedic Correction', 'Sports Injuries', 'Joint Arthroscopy'
+        ],
+        'ENT': [
+            'Adult Ear, Nose, and Throat', 'Hearing and Balance Disorders', 
+            'Pediatric Ear, Nose, and Throat Surgery'
+        ]
+        }
+    };
+
+    document.getElementById('specialty').addEventListener('change', function() {
+        const specialty = this.value;
+        document.getElementById('sub-specialty-container').style.display = 'block';
+        const subSpecialtySelect = document.getElementById('sub-specialty');
+        subSpecialtySelect.innerHTML = '<option value="">Select Sub-Specialty</option>';
+        
+        // Clear selected sub-specialties when changing specialty
+        selectedSubSpecialties.clear();
+        document.getElementById('selected-sub-specialties').innerHTML = '';
+
+        if (subSpecialtyOptions[specialty]) {
+            subSpecialtyOptions[specialty].forEach(function(sub) {
+                const option = document.createElement('option');
+                option.value = sub;
+                option.textContent = sub;
+                subSpecialtySelect.appendChild(option);
+            });
+        } else {
+            document.getElementById('sub-specialty-container').style.display = 'none';
+        }
+    });
+
+    document.getElementById('sub-specialty').addEventListener('change', function() {
+        const value = this.value;
+        if (value && !selectedSubSpecialties.has(value)) {
+            selectedSubSpecialties.add(value);
+            const div = document.createElement('div');
+            div.className = 'sub-specialty-item';
+            div.innerHTML = `${value} <span class="remove" data-value="${value}">&times;</span>`;
+            document.getElementById('selected-sub-specialties').appendChild(div);
+            this.value = ''; // Reset the dropdown
+        }
+    });
+
+    document.getElementById('selected-sub-specialties').addEventListener('click', function(e) {
+        if (e.target.classList.contains('remove')) {
+            const value = e.target.dataset.value;
+            selectedSubSpecialties.delete(value);
+            e.target.parentElement.remove();
+        }
+    });
+
+    document.getElementById('personal-form').addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent form submission
+        let valid = true;
+
+        // Hide all error messages and reset input colors
+        document.querySelectorAll('.error-message').forEach(function(el) {
+            el.style.display = 'none';
+        });
+        document.querySelectorAll('.form-control').forEach(function(el) {
+            el.classList.remove('error');
+        });
+
+        // Validate fields
+        if (document.getElementById('full-name').value === '') {
+            document.getElementById('full-name-error').style.display = 'block';
+            document.getElementById('full-name').classList.add('error');
+            valid = false;
+        }
+     
+
+        // Phone number validation
+        const mobileNumber = document.getElementById('mobile-number').value;
+        if (!/^\d{11}$/.test(mobileNumber)) {
+            document.getElementById('mobile-error').textContent = 'Phone number must be 11 digits.';
+            document.getElementById('mobile-error').style.display = 'block';
+            document.getElementById('mobile-number').classList.add('error');
+            valid = false;
+        }
+
+        if (document.getElementById('specialty').value === '') {
+            document.getElementById('specialty-error').style.display = 'block';
+            document.getElementById('specialty').classList.add('error');
+            valid = false;
+        }
+
+        // Email validation
+        const email = document.getElementById('email').value;
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            document.getElementById('email-error').textContent = 'Invalid email format.';
+            document.getElementById('email-error').style.display = 'block';
+            document.getElementById('email').classList.add('error');
+            valid = false;
+        }
+
+        // Password validation
+        const password = document.getElementById('password').value;
+        if (!/^(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,15}$/.test(password)) {
+            document.getElementById('password-error').textContent = 'Password must be 8-15 characters long and include a special character.';
+            document.getElementById('password-error').style.display = 'block';
+            document.getElementById('password').classList.add('error');
+            valid = false;
+        }
+
+        if (document.getElementById('location').value === '') {
+            document.getElementById('location').classList.add('error');
+            valid = false;
+        }
+        if (document.getElementById('price').value === '') {
+            document.getElementById('price').classList.add('error');
+            valid = false;
+        }
+        if (document.getElementById('waiting-time').value === '') {
+            document.getElementById('waiting-time').classList.add('error');
+            valid = false;
+        }
+        if (document.getElementById('doctor-info').value === '') {
+            document.getElementById('doctor-info').classList.add('error');
+            valid = false;
+        }
+     
+
+        // If valid, proceed with submission (or your desired action)
+        if (valid) {
+            alert("Form submitted successfully!");
+            // Here you can add your form submission logic
+        }
+    });
+});
+
+</script>
+
+</body>
+</html>

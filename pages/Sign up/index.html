@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Doctor Sign Up</title>
+    <style>
+        body {
+            padding-top: 56px; /* Space for the fixed navbar */
+            background-color: #f1f1f0; /* Body background color */
+        }
+        .sign-up-container {
+            max-width: 100%; /* Full width of container */
+            height: 40vh; /* Adjust height for dynamic content */
+            margin: 20px auto; /* Center the div and add space above */
+            border-radius: 8px; /* Optional: Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Shadow for depth */
+            padding: 40px; /* Increased padding inside the div */
+            position: relative; /* Positioning for the pseudo-element */
+            background-color: white; /* Set background color to white */
+        }
+        .sign-up-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px; /* Height of the top border */
+            background: linear-gradient(to right, #0070cd 30%, #b6d6f0 30%); /* Gradient border */
+            z-index: 1; /* Ensure it's above the background */
+        }
+        .navbar-brand {
+            position: relative;
+            font-size: 24px; /* Adjust the font size as needed */
+        }
+        .navbar-brand .letter-a {
+            position: relative;
+            top: -8px; /* Move 'A' higher */
+        }
+        .navbar-brand .dot-com {
+            color: red; /* Color for .com */
+        }
+        .navbar-brand .underline {
+            position: absolute;
+            bottom: -2px; /* Adjust to position the line */
+            left: 0;
+            width: 10px; /* Width of the underline */
+            height: 2px; /* Thickness of the underline */
+            background-color: red;
+        }
+        .btn-custom {
+            background-color: white; /* Button background color */
+            border: 1px solid black; /* Solid black border */
+            color: #0070cd; /* Button text color */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #0070cd;">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">
+                <span class="letter-a">A</span>l Hayah <span class="dot-com">.com</span>
+                <span class="underline"></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="images/eg.png" alt="Egypt Flag" width="20" height="15"> Egypt
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#"><img src="images/lb.png" alt="Lebanon Flag" width="20" height="15"> Lebanon</a>
+                            <a class="dropdown-item" href="#"><img src="images/ke.png" alt="Kenya Flag" width="20" height="15"> Kenya</a>
+                            <a class="dropdown-item" href="#"><img src="images/ng.png" alt="Nigeria Flag" width="20" height="15"> Nigeria</a>
+                            <a class="dropdown-item" href="#"><img src="images/sa.png" alt="Saudi Arabia Flag" width="20" height="15"> Saudi Arabia</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="container">
+    <div class="sign-up-container ">
+        <h4>Create a new account</h4>
+        <div class="text-center ">
+            <button class="btn btn-custom " id="continue-button">
+                <i class="fa-regular fa-envelope"></i> Continue with email
+            </button>
+        </div>
+        <p class="text-center mt-3">
+            Already have an account? <a href="#" style="color: #0070cd;">Login</a>
+        </p>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#continue-button').on('click', function() {
+            // Redirect to another page (change 'nextpage.html' to your target URL)
+            window.location.href = 'nextpage.html';
+        });
+    });
+</script>
+</body>
+</html>

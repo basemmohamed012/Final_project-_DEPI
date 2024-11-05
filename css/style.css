@@ -1,0 +1,599 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: "Cairo", sans-serif !important;
+    font-size: 16px;
+    color: #666;
+    background-color: #fff;
+}
+p{
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+
+.navbar-custom {
+    background-color: #0165a7;
+    /* اللون الأزرق */
+}
+
+.navbar-brand {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.first-letter {
+    position: relative;
+    top: -5px;
+    right: 2px;
+    border-bottom: 5px solid rgb(213, 51, 51);
+}
+
+.flag-icon {
+    width: 20px;
+    height: auto;
+}
+
+.com {
+    color: rgb(213, 51, 51);
+    font-size: 0.7em;
+    /* جعل .com أصغر */
+}
+
+.btn-outline-light:hover {
+    color: #0165a7;
+}
+
+.navbar-toggler {
+    border-color: white;
+    /* تغيير لون الحدود إلى الأبيض */
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(255,255,255,1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+    /* تغيير لون الأيقونة إلى الأبيض */
+}
+
+
+
+
+.cover-section {
+    position: relative;
+    /* استخدم relative بدلاً من absolute */
+    overflow: hidden;
+    /* منع الفائض من الصورة */
+    height: 100vh;
+    background: linear-gradient(to right, #ded4e6, #ffffff, #ded4e6);
+    /* تدرج من الجانبين */
+    display: flex;
+
+}
+
+
+.heart-shape {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    /* يمكنك تعديل الموضع حسب الحاجة */
+    width: 200px;
+    height: 200px;
+    background-color: #dc3545;
+    border-radius: 50% 50% 0 0;
+    transform: rotate(-45deg);
+    z-index: 1;
+    /* وضع القلب خلف الصورة */
+
+    @media (min-width:999px) {
+        left: 30% !important;
+    }
+
+    @media (min-width:1200px) {
+        left: 34% !important;
+    }
+}
+
+.heart-shape::before,
+.heart-shape::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #dc3545;
+    border-radius: 50%;
+}
+
+.heart-shape::before {
+    top: -100px;
+    left: 0;
+}
+
+.heart-shape::after {
+    top: 0;
+    left: 100px;
+}
+
+.cover-section h1 {
+    margin: 0;
+    /* إزالة الهوامش */
+    color: #3d3a3a;
+    /* لون النص */
+    font-weight: bolder;
+    padding-top: 25px;
+}
+
+.cover-section p {
+    margin: 0;
+    color: #0d6efd;
+    font-weight: 700;
+}
+
+.cover-section .description {
+    color: #666 !important;
+}
+
+.cover-section h1 span {
+    color: #dc3545;
+    /* لون مخصص للنص */
+    text-decoration: underline;
+    text-underline-offset: 12px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    /* لون الزر */
+    border: none;
+    /* إزالة الحدود */
+    width: 200px;
+    /* عرض الزر */
+    text-align: center;
+    /* محاذاة النص في الزر */
+    font-weight: 600;
+    /* وزن النص */
+    display: block;
+    /* تغيير إلى block */
+    margin: 20px auto;
+    /* هوامش تلقائية لتوسيع الزر في المنتصف */
+}
+
+.btn-primary:hover {
+    background-color: white;
+    /* لون الخلفية عند التحويم */
+    color: #007bff;
+    /* لون النص عند التحويم */
+    border: #007bff 1px solid;
+    /* لون الحدود عند التحويم */
+}
+
+.img-fluid {
+    display: block;
+    position: relative;
+    width: 350px;
+    height: 350px;
+    max-width: 100%;
+    /*  تأكد من ملاءمة الصورة */
+    height: auto;
+    /* استخدام auto لضبط الارتفاع تلقائيًا */
+    border-radius: 10px;
+    /* إضافة الحواف المستديرة */
+    margin: 0 auto;
+}
+
+
+
+
+/*________________________________services___________________________*/
+
+.card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* تأثير التحويل */
+    border-radius: 15%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/*___________________________________department_______________________*/
+
+.sec1 {
+    margin-top: 40px;
+}
+
+.sec1 .container {
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0;
+}
+
+
+.specialty-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.specialty-item {
+    flex: 1 1 100%;
+    /* ليأخذ العنصر كامل العرض المتاح */
+    max-width: 100%;
+    box-sizing: border-box;
+    padding:0 15px;
+    /* padding:0 15px; */
+    text-align: center;
+}
+
+.specialty-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 200px;
+    /* تحديد ارتفاع مناسب للصورة */
+    margin-bottom: 10px;
+}
+
+
+
+
+
+.specialty-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* background-color: #ddd; */
+}
+
+
+.swiper-container {
+    width: 100%;
+    height: auto;
+    /* السماح بارتفاع تلقائي */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff;
+    /* لون الأسهم */
+}
+
+/*_________________________ counter____________________________*/
+
+.counter-box {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    transition: transform 0.3s;
+}
+
+.counter-box:hover {
+    transform: translateY(-10px);
+}
+
+.icon {
+    background-color: #007bff;
+    color: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.counter {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+}
+
+p {
+    font-size: 18px;
+    color: #6c757d;
+}
+
+
+/*________________________Circle-layout-Comments____________________*/
+.circle-container {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.avatar-center img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+}
+
+.avatar-surround img {
+    width: 80px;
+    height: 70px;
+}
+
+/*--------------------comments----------------*/
+.feedback {
+    background-color: rgb(20, 110, 180, 0.1);
+
+}
+
+.testimonial {
+    background-color: #f8f9fa;
+    /* خلفية فاتحة */
+    border: 1px solid #dee2e6;
+    /* إطار خفيف */
+    border-radius: 10px;
+    /* زوايا مدورة */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* ظل خفيف */
+    transition: transform 0.3s;
+    /* تأثير التحويل */
+}
+
+.testimonial:hover {
+    transform: scale(1.05);
+    /* تأثير التكبير عند المرور */
+}
+
+/*--------------------Qestions-----------------*/
+.faq-section {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+    /* لون خلفية */
+}
+
+.faq-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.box-q {
+    border-radius: 50%;
+
+}
+
+.accordion-button.collapsed {
+    color: #125a98;
+    /* اللون عند الانهيار */
+    text-align: left;
+}
+
+.accordion-button {
+    font-size: 1.25rem;
+    /* زيادة حجم الخط */
+    padding: 15px 20px;
+    /* زيادة ارتفاع الأزرار */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: left;
+}
+
+.accordion-button:hover {
+    background-color: #4280c2;
+    /* لون الخلفية عند التمرير */
+    color: white;
+    /* لون النص عند التمرير */
+}
+
+.accordion-body {
+    min-height: 100px;
+    /* تحديد حد أدنى لارتفاع المحتوى */
+}
+
+.doctor-image {
+    max-width: 80%;
+    height: auto;
+}
+
+
+.faq-question {
+    color: #2c3e50;
+    font-weight: bold;
+    text-align: right;
+}
+
+/*--------------------Contact us------------*/
+
+.contact-form .form-control {
+    border-radius: 0.375rem;
+    /* الزوايا المنحنية */
+    padding: 10px 15px;
+    /* توسيع الحقول */
+    transition: border-color 0.3s ease;
+    /* تأثير الانتقال */
+    font-size: 1.1rem;
+    /* تكبير النص */
+}
+
+.contact-form .form-control:hover {
+    border-color: #198754;
+    /* لون الحدود عند التحويم */
+}
+
+.contact-form .submit {
+    border-radius: 0.375rem;
+    /* زوايا الزر المنحنية */
+    background-color: rgba(217, 83, 79);
+    /* لون خلفية الزر */
+    color: #fff;
+    /* لون النص */
+    transition: background-color 0.3s ease;
+    /* تأثير الانتقال */
+    padding: 10px 0;
+    /* زيادة ارتفاع الزر */
+    font-size: 1.2rem;
+    /* تكبير نص الزر */
+}
+
+.contact-form .submit:hover {
+    background-color: rgba(161, 64, 60);
+    /* لون الزر عند التحويم */
+}
+
+
+
+
+/*--------------------Footer----------------*/
+.footer {
+    background-color: #0165a7;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-logo {
+    max-width: 50%;
+}
+
+.footer h4 {
+    margin-bottom: 15px;
+}
+
+.footer .social-links a {
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+
+
+
+
+/* جعل اسم الموقع والعناوين الرئيسية أكبر وحجم أكبر من العناصر الأخرى */
+.footer .sitename {
+    font-size: 3rem;
+    /* تكبير اسم الموقع */
+    color: white;
+    direction: ltl;
+}
+
+.footer h4 {
+    font-size: 2rem;
+    /* تكبير العناوين الرئيسية */
+    color: white;
+}
+
+/* جعل النصوص الأخرى والمعلومات لونها أبيض */
+.footer p,
+.footer p strong,
+.footer p span {
+    font-size: 1.2rem;
+    /* يمكنك تعديل الحجم هنا */
+    color: white;
+}
+
+/* جعل الروابط باللون الأبيض */
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* تغيير لون الروابط عند التمرير */
+.footer a:hover {
+    color: #b6adad;
+    /* لون الهوفر */
+}
+
+/* جعل أيقونات السوشيال ميديا باللون الأبيض */
+.footer .social-links a {
+    color: white;
+    font-size: 1.5rem;
+    /* حجم الأيقونات */
+}
+
+/* تأثير الهوفر على أيقونات السوشيال ميديا */
+.footer .social-links a:hover {
+    color: rgb(124, 36, 36);
+    /* لون الهوفر للأيقونات */
+}
+
+
+
+@media (max-width: 768px) {
+
+    .footer-about,
+    .footer-links {
+        text-align: center;
+    }
+
+    .footer .logo {
+        justify-content: center;
+    }
+
+    .footer .social-links {
+        justify-content: center;
+    }
+
+    .footer h4 {
+        font-size: 1.5rem;
+    }
+
+    .footer .footer-contact p,
+    .footer .footer-links ul {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* أسلوب خاص لعنصر القائمة */
+.collapse {
+    overflow: hidden;
+    max-height: 0;
+    /* تثبيت العرض الأولي على 0 */
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    /* الانتقال فقط للارتفاع */
+    opacity: 0;
+    /* لجعل الفتح والإغلاق تدريجي */
+}
+
+.collapse.show {
+    max-height: 500px;
+    /* تحديد ارتفاع مناسب بحيث لا يظهر العنصر الكبير فجأة */
+    opacity: 1;
+}
+
+
+/* التأثيرات على العناصر الداخلية */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.collapse.show .navbar-nav {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.collapse .navbar-nav {
+    animation: fadeOut 0.5s ease forwards;
+}
